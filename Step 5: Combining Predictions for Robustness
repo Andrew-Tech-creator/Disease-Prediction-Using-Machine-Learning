@@ -1,0 +1,11 @@
+from statistics import mode
+
+final_preds = [mode([i, j, k]) for i, j, k in zip(svm_preds, nb_preds, rf_preds)]
+
+cf_matrix_combined = confusion_matrix(y_resampled, final_preds)
+plt.figure(figsize=(12, 8))
+sns.heatmap(cf_matrix_combined, annot=True, fmt="d")
+plt.title("Confusion Matrix for Combined Model")
+plt.show()
+
+print(f"Combined Model Accuracy: {accuracy_score(y_resampled, final_preds) * 100:.2f}%")
