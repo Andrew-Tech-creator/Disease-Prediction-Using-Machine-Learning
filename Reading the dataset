@@ -1,0 +1,19 @@
+#You can download data_set from : https://media.geeksforgeeks.org/wp-content/uploads/20250415160347722782/improved_disease_dataset.csv
+data = pd.read_csv('improved_disease_dataset.csv')
+
+encoder = LabelEncoder()
+data["disease"] = encoder.fit_transform(data["disease"])
+
+X = data.iloc[:, :-1]
+y = data.iloc[:, -1]
+
+plt.figure(figsize=(18, 8))
+sns.countplot(x=y)
+plt.title("Disease Class Distribution Before Resampling")
+plt.xticks(rotation=90)
+plt.show()
+
+ros = RandomOverSampler(random_state=42)
+X_resampled, y_resampled = ros.fit_resample(X, y)
+
+print("Resampled Class Distribution:\n", pd.Series(y_resampled).value_counts())
