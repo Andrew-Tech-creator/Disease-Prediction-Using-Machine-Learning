@@ -1,6 +1,6 @@
 🧠 Disease Prediction Using Machine Learning
 
-This repository contains a Machine Learning-based Disease Prediction system, inspired by the [GeeksforGeeks article](https://www.geeksforgeeks.org/machine-learning/disease-prediction-using-machine-learning/). It predicts the most likely disease a person might be suffering from, based on input symptoms.
+This repository contains a Machine Learning-based Disease Prediction system. It predicts the most likely disease a person might be suffering from, based on input symptoms.
 
 📌 Features
 
@@ -111,7 +111,5 @@ This project is open-source and available under the [MIT License](LICENSE).
 
 
 ✍️ Author
-
-Developed based on the tutorial by [GeeksforGeeks](https://www.geeksforgeeks.org/machine-learning/disease-prediction-using-machine-learning/).
 Modified and maintained by \[Andrew Michael Anthony].
 
